@@ -1,0 +1,715 @@
+$important-col: #1f1955;
+$orange-col: #cc7236;
+$snow-col: #fff;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    // overflow-x: hidden;
+}
+
+h1 {
+    padding: 0;
+    margin: 1.1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    color: $important-col;
+}
+
+h2 {
+    padding: 0;
+    margin: 1rem 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: $important-col;
+}
+
+h3 {
+    padding: 0;
+    margin: .7rem 0;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: $important-col;
+}
+
+p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: $important-col;
+}
+
+img{
+    width: 100%;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    padding: 17px 0;
+    line-height: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+a.btn{
+    margin: 15px 0 10px 0;
+    color: $snow-col;
+    font-weight: 500;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: capitalize;
+    background-color: $orange-col;
+    transition: all .3s cubic-bezier(0.85, 0.01, 0.4, 0.89);
+
+    &:hover{
+        color: $orange-col;
+        background: none;
+    }
+}
+a.active{
+    color: $orange-col !important;
+}
+
+.toogle{
+    input{
+        opacity: 0;            
+    }
+    label{            
+    font-size: 1rem;
+    color: #141414;
+    float: right;
+    line-height: 20px;
+    cursor: pointer;
+    }
+
+}
+
+
+input:checked ~ ul{
+    left: 0;
+}
+
+.header{
+    width: 100%;
+    padding: 1.5rem 0 2rem 0;
+    background-color: #f1f1f1;
+    
+    &__logo{
+        img{
+            width: 50%;
+        }
+    }
+
+    &__links{
+        z-index: 1;
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            display: block;
+            background-color: rgb(126, 150, 196);
+            z-index: 10;
+            li{
+            margin-right: 15px;
+            text-transform: uppercase;
+            transition: color .2s ease;
+            font-weight: 500;
+            display: block;
+            }
+            
+            a{  
+            color: $important-col;
+            }
+            li:hover a{
+            color: $orange-col;
+            } 
+        }
+        
+    }
+
+    &__banner{
+        padding: 1rem 0;
+
+        span{
+            color: $orange-col;
+            font-weight: 500;
+            position: relative;
+            margin-top: 1rem;
+        }
+        &__buttons{
+            position: relative;
+            margin: 2rem 0;
+            a:nth-child(2){
+                margin-left: .2rem;
+                color: $important-col;
+                font-weight: 500;
+
+                i{
+                    position: relative;
+                    transform: translateY(1px);
+                    margin-right: 3px;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    color: $important-col;
+                }
+            }
+        }
+        &__img{
+            width: 80%;
+        }
+    }
+    
+}
+
+// Section: Brand
+.brand{
+    display: none;
+}
+
+// Section: Key
+.key{
+    width: 100%;
+    padding: 2.5rem 0 3.5rem 0;
+
+    &__qator{
+        padding-top: 4rem;
+    }
+
+    &__box{
+        padding-left: 10px;
+        padding-right: 10px;
+    
+        &__content{
+            width: 70%;
+            padding: 20px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            text-align: center;
+            transform: translateX(21%);
+            border-radius: 25px;
+            box-shadow: 0 0 39px 1px rgba(173, 173, 173, 0.315);
+
+            &__icon{
+                width: 70px;
+                height: 65px;
+                display: inline-block;
+                border-radius: 20px;
+                background-color: rgba(158, 158, 158, 0.438);
+                i{
+                    line-height: 65px;
+                    text-align: center;
+                    font-size: 2rem;
+                    color: $orange-col;
+                }
+            }
+        }
+    }
+
+}
+
+// Section: App
+.app{
+    padding: 4rem 0 12rem 0;
+    background-color: #f1f1f1;
+    a{
+        padding: 30px 40px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50px, 25px);
+
+        background-color: $orange-col;
+        color: $snow-col;
+        text-align: center;
+        i{
+            font-size: 1.5rem;
+            line-height: 30px;
+        }
+    }
+}
+
+// Section: Marketing
+.marketing{
+    padding: 3rem 0 6.5rem 0;
+    &__numbers{
+        display: flex;
+        justify-content: space-around;
+        color: $important-col;
+        span{
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        p{
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+    }
+
+    &__img{
+        width: 700px;
+    }
+
+    &__grid{
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 380px);
+
+        &__text{
+            grid-column: 1/2;
+            grid-row: 1/2;
+
+            a{                
+                position: absolute;
+            }
+        }
+
+        &__img{
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+    }
+}
+
+// Section: Saying
+.saying{
+    background-color: #f1f1f1;
+    padding: 3rem 0;
+    margin-top: 4.5rem;
+
+    &__icon{
+        width: 100%;
+        text-align: center;
+
+        i{
+            padding: 35px 40px;
+            line-height: 35px;
+            border-radius: 25px;
+            background-color: rgba(240, 181, 114, 0.329);
+            color: $orange-col;
+            font-size: 2rem;
+        }
+    }
+    &__box__text{
+        padding: 20px 0;
+
+        span{
+            text-transform: uppercase;
+            color: $important-col;
+            letter-spacing: 1px;
+            margin-top: -7px;
+            font-size: .6rem;
+        }
+    }
+}
+
+// Section: Questions
+.questions{
+    padding: 4rem 0;
+    &__box{
+        padding: 1.5rem;
+        margin-top: 2rem;
+        border-radius: 25px;
+        box-shadow: 0 0 39px 1px rgba(173, 173, 173, 0.315);
+    }
+}
+
+// Section: Footer
+.footer{
+    background-color: #f1f1f1;
+    padding: 4rem 0 1rem 0;
+    span{
+        font-size: 1.1rem;
+        color: $orange-col;
+        letter-spacing: 1px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    span.footer__span{
+        color: grey;
+        text-transform: capitalize;
+        font-size: .8rem;
+        font-weight: 500;
+    }
+    &__brand{
+        margin-top: 1rem;
+        li{
+            padding: 15px 20px;
+            background-color: $orange-col;
+            border-radius: 50%;
+            a{
+                color: $snow-col;
+                text-decoration: none;
+            }
+        }
+    }
+    .hr{
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        margin-top: 1rem;
+        background-color: gray;
+        position: absolute;
+    }
+    &__links{
+        padding: 1.5rem 0;
+        position: relative;
+        span.footer__links__span{
+            color: grey;
+            text-transform: capitalize;
+            font-size: .8rem;
+            font-weight: 500;
+        }
+        &__ul{
+            li{
+                padding: 13px 10px;
+                a{
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+
+
+
+//     ABOUT HTML
+
+// Section: Header
+.header__title_spans li {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 2px 6px;
+    background-color: $orange-col;
+}
+// Section: Digital
+.digital{
+    padding: 3rem 0 4.5rem 0;
+
+    &__img{
+        img{
+            border-radius: 10px;
+        }
+    }
+    &__text{
+    padding: 0 20px;
+    }
+
+    .progress{
+        display: flex;
+        width: 100%;
+        height: 1rem;
+        overflow: hidden;
+        border-radius: .5rem;
+        background-color: #dbdbdb;
+        &__bar__one{
+            width: 90%;
+            background-color: $orange-col;
+        }
+        &__bar__two{
+            width: 97%;
+            background-color: rgb(78, 114, 78);
+        }
+        &__bar__tree{
+            width: 80%;
+            background-color: yellow;
+        }
+    }
+}
+
+// Section: Icons
+.icons{
+    padding: 4rem 0;
+    background-color: #f1f1f1;
+    &__pad{
+        padding: .5rem 1rem;
+        &__box{
+            text-align: center;
+            i{
+                color: $orange-col;
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 40px;
+                background-color: rgba(202, 159, 78, 0.2);
+                border-radius: 15px;
+                padding: 20px 32px;
+            }
+            p{
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+// Section: Team
+.team{
+    padding: 2.7rem 0;
+    &__box{
+        padding: 1.5rem 1rem;
+        &__content{
+            border-radius: 20px;
+            box-shadow: 0 0 13px 1px rgba(173, 173, 173, 0.384);
+            img{
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+            p{
+                color: gray;
+                text-transform: uppercase;
+                font-size: .8rem;
+                letter-spacing: 0;
+                // margin-bottom: -10px;
+            }
+            &__ul{
+
+                li{
+                    padding: 5px;
+                    a{
+                        i{
+                            color: gray;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+//     SERVICES HTML
+.services{
+    padding: 3rem 0;
+    
+    h2{
+        text-align: center;
+    }
+    &__box{
+        padding: 25px;
+
+        &__content{
+            padding: 20px 7px;
+            border-radius: 25px;
+            box-shadow: 0 0 17px 1px rgba(150, 149, 149, 0.315);
+
+            i{
+                color: $orange-col;
+                font-size: 1.5rem;
+                text-align: center;
+                line-height: 40px;
+                background-color: rgba(202, 159, 78, 0.2);
+                border-radius: 15px;
+                padding: 20px 32px;
+            }
+            i:nth-child(2){
+                color: blue;
+            }
+        }
+    }
+}
+
+
+
+//     SERVICES HTML
+.sign{
+    background-color: #fff;
+    &__box{
+        padding: 1rem 0;
+        p{
+            color: gray;
+        }
+        &__content{
+            border-radius: 25px;
+            box-shadow: 0 0 17px 1px rgba(150, 149, 149, 0.315);
+            padding: 20px 20px 0 20px;
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+            label{
+                width: 100%;
+                margin: 1rem 0;
+                input{
+                    width: 100%;
+                    border: none;
+                    border-bottom: 2px solid gray;
+                    color: gray;
+                    outline: none;
+                    font-weight: 500;
+                }
+            }
+            textarea{
+                border: none;
+                width: 100%;
+                height: 30%;
+                border-bottom: 2px solid gray;
+                outline: none;
+                color: gray;
+                font-size: .9rem;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+
+
+// FOR -- SM
+@media only screen and (min-width: 48em){
+    .header__banner__buttons a:nth-child(2){
+        margin-left: 2rem;
+    }
+    .marketing{
+        padding: 3rem 0 14rem 0;
+    }
+    .toogle{
+        label{
+            line-height: 60px;
+        }
+    }
+}
+// FOR -- MD
+@media only screen and (min-width: 64em){
+    #check{
+        display: none;
+    }
+    .checkbtn{
+        display: none;
+    }
+    .header__logo{
+        img{
+            width: 30%;
+        }
+    }
+    .header__links{
+        ul{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            top: 3px;
+            left: 20px;
+            text-align: center;
+            transition: all .1s;
+            background: none;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+    .brand{
+        display: block;
+        width: 100%;
+        padding: 2.5rem 0 2rem 0;
+        text-align: center;
+        p{
+            margin: auto;
+            text-align: center;
+            width: 70%;
+            padding-bottom: 1.7rem;
+        }
+        &__img{
+            margin-bottom: 1rem;
+        }
+        img{
+            width: 70%;
+            text-align: center;
+        }
+    }
+
+
+    .key__qator{
+        padding-top: 6rem;
+    }
+    .key__box__content{
+        width: 100%;
+        transform: translateX(0);
+    }
+    .key__box__content:nth-child(2){
+        transform: translateY(-20px);
+    }
+
+
+    .marketing{
+        padding: 2rem 0;
+        &__grid{
+            grid-template-columns: repeat(2, 500px);
+            grid-template-rows: repeat(1, 500px);
+            grid-gap: 25px;
+
+            &__img{
+                grid-column: 1/2;
+                grid-row: 1/2;
+
+                img{ 
+                    width: 500px;
+                }
+            }
+
+            &__text{
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                &__main{
+                    width: 500px;
+                }
+            }
+        }
+    }
+    .saying{
+        margin-top: 0;
+        &__box__text{
+            padding: 0 20px;
+        }
+    }
+}
+// FOR -- LG
+@media only screen and (min-width: 75em){
+    .brand{
+        &__img{
+            margin-bottom: .5rem;
+        }
+        img{
+            width: 90%;
+        }
+    }
+
+    .marketing{
+        &__grid{
+            grid-template-columns: repeat(2, 550px);
+            grid-template-rows: repeat(1, 500px);
+            grid-gap: 25px;
+
+            &__img{
+                grid-column: 1/2;
+                grid-row: 1/2;
+
+                img{ 
+                    width: 550px;
+                }
+            }
+
+            &__text{
+                grid-column: 2/3;
+                grid-row: 1/2;
+
+                &__main{
+                    width: 650px;
+                }
+            }
+        }
+    }
+}
